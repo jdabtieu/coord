@@ -2,6 +2,15 @@ A simple Coordinate class for Java.
 
 # Documentation
 
+com.jdabtieu<br>
+**Class Coord**
+
+java.lang.Object<br>
+&nbsp;&nbsp;&nbsp;&nbsp;com.jdabtieu.Coord
+
+**All Implemented Interfaces:**<br>
+`Cloneable, Comparable<Coord>`
+___
 ```java
 public class Coord
 extends Object
@@ -20,13 +29,14 @@ The Coord class represents coordinates on a Cartesian plane.<br>It stores coordi
 ## Method Summary
 
 | Modifier and Type | Method and Description |
-| ----------------- | ---------------------  |
+| ----------------- | ---------------------- |
 | Coord | `clone()`<br>Returns a new Coord with the same coordinates as this. |
 | int | `compareTo(Coord arg0)`<br>Compares two Coords using the compareMode. |
 | double | `distanceTo(Coord arg0)`<br>Gets the straight-line distance from this to arg0. |
 | boolean | `equals(Object obj)`<br>Compares this Coord to the specified object. |
 | int | `getX()`<br>Gets the x-coordinate of this Coord. |
 | int | `getY()`<br>Gets the y-coordinate of this Coord. |
+| int | `hashCode()`<br>Returns a hash code for this Coord. |
 | static void | `setCompareMode(String newMode)`<br>Sets a new compareMode. |
 | void | `setLocation(int x, int y)`<br>Sets the location of this Coord to (x,y). |
 | void | `setLocation(String x, String y)`<br>Sets the location of this Coord to (x,y). |
@@ -36,3 +46,7 @@ The Coord class represents coordinates on a Cartesian plane.<br>It stores coordi
 | void | `translate(int dx, int dy)`<br>Move this Coord to (x+dx,y+dy). |
 | void | `translate(long dx, long dy)`<br>Move this Coord to (x+dx,y+dy). |
 | void | `translate(String dx, String dy)`<br>Move this Coord to (x+dx,y+dy). |
+
+| Methods inherited from java.lang.Object |
+| --------------------------------------- |
+| `getClass, hashCode, notify, notifyAll, wait, wait, wait` |
