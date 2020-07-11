@@ -1,9 +1,8 @@
 package com.jdabtieu;
-
 public class Coord implements Comparable<Coord>, Cloneable {
 	/**
 	 * @author jdabtieu (jonathan.wu3@outlook.com)
-	 * @version 1.1.3, 07/10/20
+	 * @version 1.2.0, 07/11/20
 	 */
 	private int x;
 	private int y;
@@ -47,7 +46,7 @@ public class Coord implements Comparable<Coord>, Cloneable {
 	}
 	
 	/**
-	 * Sets the y-coordinate of this Coord.
+	 * Sets the x-coordinate of this Coord.
 	 */
 	public void setX(int x) {
 		this.x = x;
@@ -201,9 +200,21 @@ public class Coord implements Comparable<Coord>, Cloneable {
 	}
 	
 	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + x;
+		result = prime * result + y;
+		return result;
+	}
+
+	@Override
 	public boolean equals(Object obj) {
-		if (!(obj instanceof Coord)) return false;
-		Coord c = (Coord) obj;
-		return c.x == x && c.y == y;
+		if (this == obj)
+			return true;
+		if (!(obj instanceof Coord))
+			return false;
+		Coord other = (Coord) obj;
+		return x == other.x && y == other.y;
 	}
 }
