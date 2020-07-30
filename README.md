@@ -49,4 +49,4 @@ The Coord class represents coordinates on a Cartesian plane.<br>It stores coordi
 
 | Methods inherited from java.lang.Object |
 | --------------------------------------- |
-| `getClass, hashCode, notify, notifyAll, wait, wait, wait` |
+| [`finalize`](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--), [`getClass`](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--), [`notify`](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--), [`notifyAll`](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--), [`wait`](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--), [`wait`](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-), [`wait`](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-) |
