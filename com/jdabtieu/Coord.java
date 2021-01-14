@@ -126,6 +126,7 @@ public class Coord implements Comparable<Coord>, Cloneable {
 	 * @return	   Euclidean distance between this and arg0
 	 * @deprecated
 	 */
+	@Deprecated
 	public double distanceTo(Coord arg0) {
 		return eucDist(arg0);
 	}

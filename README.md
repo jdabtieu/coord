@@ -32,11 +32,13 @@ The Coord class represents coordinates on a Cartesian plane.<br>It stores coordi
 | ----------------- | ---------------------- |
 | Coord | `clone()`<br>Returns a new Coord with the same coordinates as this. |
 | int | `compareTo(Coord arg0)`<br>Compares two Coords using the compareMode. |
-| double | `distanceTo(Coord arg0)`<br>Gets the straight-line distance from this to arg0. |
+| double | `distanceTo(Coord arg0)`<br>**Deprecated - use eucDist instead**<br>Gets the straight-line distance from this to arg0. |
 | boolean | `equals(Object obj)`<br>Compares this Coord to the specified object. |
+| double | `eucDist(Coord arg0)`<br>Gets the straight-line (Euclidean) distance from this to arg0. |
 | int | `getX()`<br>Gets the x-coordinate of this Coord. |
 | int | `getY()`<br>Gets the y-coordinate of this Coord. |
 | int | `hashCode()`<br>Returns a hash code for this Coord. |
+| long | `manDist(Coord arg0)`<br>Gets the Manhattan distance from this to arg0. |
 | static void | `setCompareMode(String newMode)`<br>Sets a new compareMode. |
 | void | `setLocation(int x, int y)`<br>Sets the location of this Coord to (x,y). |
 | void | `setLocation(String x, String y)`<br>Sets the location of this Coord to (x,y). |
@@ -71,11 +73,15 @@ The Coord class represents coordinates on a Cartesian plane.<br>It stores coordi
 
 | distanceTo |
 | ---------- |
-| `public double distanceTo(Coord arg0)`<br>Calculates the straight-line distance to another Coord `arg0`. The returned distance will always be zero or positive.<br><b>Parameters:</b><br>`arg0` the Coord to calculate distance to<br><b>Returns:</b><br>the straight-line distance to `arg0` |
+| `public double distanceTo(Coord arg0)`<br>**Deprecated - use eucDist instead**<br>Calculates the straight-line distance to another Coord `arg0`. The returned distance will always be zero or positive.<br><b>Parameters:</b><br>`arg0` the Coord to calculate distance to<br><b>Returns:</b><br>the straight-line distance to `arg0` |
 
 | equals |
 | ------ |
 | `public boolean equals (Object obj)`<br>Compares this Coord to the specified object. The result is true if the argument is not `null` and is a Coord representing the same point on the Cartesian plane as this Coord.<br><b>Overrides:</b><br>`equals` in class `Object`<br><b>Parameters:</b><br>`true` if the given object is equivalent to this Coord, `false` otherwise<br><b>See Also:</b><br>`compareTo(Coord)` |
+
+| eucDist |
+| ------- |
+| `public double eucDist(Coord arg0)`<br>Calculates the straight-line (Euclidean) distance to another Coord `arg0`. The returned distance will always be zero or positive.<br><b>Parameters:</b><br>`arg0` the Coord to calculate distance to<br><b>Returns:</b><br>the straight-line (Euclidean) distance to `arg0` |
 
 | getX |
 | ---- |
@@ -88,6 +94,10 @@ The Coord class represents coordinates on a Cartesian plane.<br>It stores coordi
 | hashCode |
 | -------- |
 | `public int hashCode()`<br>Returns a hash code for this Coord. The hash code for a `Coord` object is computed as `(1 * 31 + x) * 31 + y`. The hash code for the Coord representing the origin is 961.<br><b>Overrides:</b><br>`hashCode` in class `Object`<br><b>Returns:</b><br>a hash code for this Coord |
+
+| manDist |
+| ------- |
+| `public long manDist(Coord arg0)`<br>Calculates the Manhattan distance to another Coord `arg0`. The returned distance will always be zero or positive.<br><b>Parameters:</b><br>`arg0` the Coord to calculate distance to<br><b>Returns:</b><br>the Manhattan distance to `arg0` |
 
 | setCompareMode |
 | -------------- |
