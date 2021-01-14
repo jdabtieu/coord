@@ -2,7 +2,7 @@ package com.jdabtieu;
 public class Coord implements Comparable<Coord>, Cloneable {
 	/**
 	 * @author jdabtieu (jonathan.wu3@outlook.com)
-	 * @version 1.2.0, 07/11/20
+	 * @version 1.3.0, 01/14/21
 	 */
 	private int x;
 	private int y;
@@ -121,12 +121,31 @@ public class Coord implements Comparable<Coord>, Cloneable {
 	}
 	
 	/**
-	 * Gets the straight-line distance from this to arg0
+	 * Gets the Euclidean distance from this to arg0
 	 * @param arg0 Coord to calculate distance to
-	 * @return	   Distance between this and arg0
+	 * @return	   Euclidean distance between this and arg0
+	 * @deprecated
 	 */
 	public double distanceTo(Coord arg0) {
-		return Math.sqrt(((long) arg0.x - this.x) *  ((long) arg0.x - this.x) + ((long) arg0.y - this.y) * ((long) arg0.y - this.y));
+		return eucDist(arg0);
+	}
+	
+	/**
+     * Gets the Euclidean distance from this to arg0
+     * @param arg0 Coord to calculate distance to
+     * @return     Euclidean distance between this and arg0
+     */
+	public double eucDist(Coord arg0) {
+	    return Math.sqrt(((long) arg0.x - this.x) * ((long) arg0.x - this.x) + ((long) arg0.y - this.y) * ((long) arg0.y - this.y));
+	}
+	
+    /**
+     * Gets the Manhattan distance from this to arg0
+     * @param arg0 Coord to calculate distance to
+     * @return     Manhattan distance between this and arg0
+     */	
+	public long manDist(Coord arg0) {
+	    return Math.abs((long) this.x - arg0.x) + Math.abs((long) this.y - arg0.y);
 	}
 	
 	/**
