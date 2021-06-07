@@ -4,6 +4,7 @@ public class Coord implements Comparable<Coord>, Cloneable {
 	 * @author jdabtieu (jonathan.wu3@outlook.com)
 	 * @version 1.3.0, 01/14/21
 	 */
+	public static final Coord ORIGIN = new Coord(0, 0);
 	private int x;
 	private int y;
 	
